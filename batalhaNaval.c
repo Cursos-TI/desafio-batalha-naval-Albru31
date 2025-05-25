@@ -24,15 +24,16 @@ int main() {
     }
 
     // Demarcaçao do barco 1 na diagonal via código
-    for (int i = 3; i < 6; i++) { // Loop para barco 1 na diagonal
-        Tabuleiro[i][i-2] = 3;    
-    }
+    for (int i = 0; i < 3; i++) { // Loop para barco 1 na diagonal
+        Tabuleiro[i+3][i+1] = 3; 
+        // [i+3] - Descola o inicio do barco para a linha 4
+    }   // [i+1] - Desloca o inicio do barco para a coluna B
 
     // Demarcaçao do barco 2 na diagonal via código
     for (int i = 3; i > 0; i--) { // Loop para barco 2 na diagonal
         int j;                    // Enquanto a linha [i] diminui, a coluna [j] aumenta
-        j++;
-        Tabuleiro[i][j+6] = 3;    
+        Tabuleiro[i][j+6] = 3;    // [j+6] - Define o inicio do barco na coluna G
+        j++;  
     }
     
     // Inicializaçao do tabuleiro
